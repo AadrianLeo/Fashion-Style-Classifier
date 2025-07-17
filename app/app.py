@@ -2,15 +2,21 @@ import streamlit as st
 from PIL import Image
 import base64
 import torch
+import os
 from io import BytesIO
 import torchvision.transforms as transforms
 
 # Load your full model directly
 @st.cache_resource
 def load_model():
-    model = torch.load("efficientnet_fashion_model_full.pth", map_location=torch.device('cpu'))
+    model_filename = "efficientnet_fashion_model_full.pth"
+    model_path = os.path.abspath(os.path.join("app", model_filename))
+    print("Model path:", model_path)
+
+    model = torch.load(model_path, map_location=torch.device('cpu'), weights_only=False)
     model.eval()
     return model
+
 
 # Replace with your own labels
 @st.cache_data
