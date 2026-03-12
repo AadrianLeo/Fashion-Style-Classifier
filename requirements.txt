@@ -1,7 +1,42 @@
+# Core data science
 pandas
 numpy
 matplotlib
+seaborn
+Pillow
+
+# Machine learning — classical
 scikit-learn
+scikit-image
+joblib
+
+# Deep learning — PyTorch + timm (CNN and ViT)
+torch
+torchvision
+timm
+
+# Deep learning — TensorFlow/Keras (MobileNetV2 feature extraction)
 tensorflow
+keras
+
+# Experiment tracking
+mlflow
+
+# Interpretability
+shap
+grad-cam
+
+# Interactive demo (optional)
+gradio
+
+# Data collection
+praw
+requests
+
+# Jupyter
 jupyter
+jupyterlab
+nbconvert
+
+# Annotation tool
 label-studio
